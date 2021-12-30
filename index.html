@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Red+Hat+Display:wght@500;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <title>Sobit Prasad | My Shopping Lists </title>
+
+    <style>
+        * {
+            font-family: 'Red Hat Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 93, 57);
+
+        }
+
+        .name {
+
+            background-color: yellow;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgb(0, 0, 37);
+            color: white;
+        }
+
+        .searchBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #item {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            outline: none;
+            border-radius: 7px 0 0 7px;
+            color: rgb(0, 0, 37);
+            font-weight: bold;
+        }
+
+        #btn {
+            padding: 10px;
+            background-color: rgb(0, 0, 37);
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 0 7px 7px 0;
+        }
+
+        ul {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+        }
+
+        li {
+            width: 500px;
+            margin-bottom: 10px;
+            border-left: 3px solid rgb(0, 0, 37);
+            font-weight: bold;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 0 7px 7px 0;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 37);
+
+        }
+
+        li button {
+            padding: 5px;
+            font-size: 8px;
+            background-color: rgb(0, 0, 37);
+            color: white;
+            font-weight: 300;
+            font-size: 10px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        li button:hover {
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 500px) {
+            li {
+                width: 400px;
+            }
+        }
+
+    
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="name">Shopping Karle ! </h1>
+
+    <div class="searchBox">
+        <label for="item"></label>
+        <input type="text" name="item" id="item" placeholder="Enter item to add in the list">
+        <button id="btn">Add item</button>
+    </div>
+  
+
+    <ul>
+
+    </ul>
+
+    <script>
+
+        const btn = document.querySelector('#btn');
+
+
+        btn.addEventListener('click', function () {
+            let data = document.querySelector('#item');
+            let parentList = document.querySelector('ul');
+            data.focus();
+
+            if (!(data.value == '')) {
+                let lists = document.createElement('li');
+                let btns = document.createElement('button');
+                btns.innerHTML = 'Delete';
+                lists.innerHTML = data.value;
+
+
+                parentList.append(lists);
+                lists.append(btns);
+                data.value = '';
+
+                btns.addEventListener('click', function () {
+                    parentList.removeChild(lists);
+                });
+            } else {
+            alert('Please enter something!');
+            }
+        });
+
+        // ---------------------------------------------------
+
+    </script>
+</body>
+
+</html>
