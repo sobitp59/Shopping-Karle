@@ -8,41 +8,47 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Red+Hat+Display:wght@500;800&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link rel="stylesheet" href="./responsive.css">
     <title>Sobit Prasad | My Shopping Lists </title>
 
     <style>
+        
         * {
             font-family: 'Red Hat Display', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
 
         body {
             background-color: rgb(255, 93, 57);
-
+            cursor: url("./try.png") 10 10,auto;
+            min-height: 100vh;
+            width: 100vw;
         }
 
         .name {
 
             background-color: yellow;
             text-align: center;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
             background-color: rgb(0, 0, 37);
             color: white;
+            /* added by nayan */
+            width: 100vw;
         }
 
         .searchBox {
             display: flex;
             justify-content: center;
             align-items: center;
-
+            width: 100vw;
         }
 
         #item {
-            padding: 10px;
-            width: 300px;
+            padding: 1rem;
+            width: 30rem;
             border: none;
             outline: none;
             border-radius: 7px 0 0 7px;
@@ -51,12 +57,13 @@
         }
 
         #btn {
-            padding: 10px;
+            padding: 1rem;
             background-color: rgb(0, 0, 37);
             border: none;
             color: white;
             font-weight: bold;
             border-radius: 0 7px 7px 0;
+            cursor: url("https://github.com/nayan458/live_saving_sports/blob/main/src/CSS/hvr_img.png") 10,7,auto;
         }
 
         ul {
@@ -65,16 +72,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-
+            padding: 2rem;
+            width: 100vw;
         }
 
         li {
-            width: 500px;
-            margin-bottom: 10px;
+            width: 50rem;
+            margin-bottom: 1rem;
             border-left: 3px solid rgb(0, 0, 37);
             font-weight: bold;
-            padding: 10px;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             border-radius: 0 7px 7px 0;
@@ -84,29 +91,29 @@
         }
 
         li button {
-            padding: 5px;
-            font-size: 8px;
+            padding: .5rem;
+            font-size: .8rem;
             background-color: rgb(0, 0, 37);
             color: white;
             font-weight: 300;
-            font-size: 10px;
+            font-size: 1rem;
             border: none;
             border-radius: 2px;
         }
 
         li button:hover {
-            cursor: pointer;
+            cursor: url("./try2.png") ,auto;
         }
 
         #btn:hover {
-            cursor: pointer;
+            cursor: url("./try2.png") ,auto;
         }
 
-        @media only screen and (max-width: 500px) {
+        /* @media only screen and (max-width: 500px) {
             li {
                 width: 400px;
             }
-        }
+        } */
 
     
     </style>
