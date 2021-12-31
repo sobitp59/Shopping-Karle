@@ -1,0 +1,40 @@
+html{
+    font-size: 62.5%;
+    width: 62.5%;
+    height: 62.5%;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+    transition: 1s ease-in-out;
+    background: var(--back);
+    scroll-snap-type:x mandatory;
+    overflow-x: hidden;
+    /* cursor: url("./try.png"); */
+}
+::-webkit-scrollbar{
+    display: none;
+}
+@media (max-width:998px) { html{
+    font-size: 55%;
+    width: 55%;
+    height: 55%;
+    }
+    
+    }
+    @media (max-width:836px) {html{
+    font-size: 45%;
+    width: 45%;
+    height: 45%;
+    }
+    
+    }
+    @media (max-width:768px) { html{
+    font-size: 45%;
+    
+    }}
+    @media (max-width:280px) {
+    html{
+    font-size: 30%;
+    width: 30%;
+    height: 30%;
+    }}
